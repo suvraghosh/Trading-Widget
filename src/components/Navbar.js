@@ -11,10 +11,12 @@ export default function Navbar() {
             <div className='nav-items'>
                 <BsCoin className='icon'/>
                 <p>Crypto<span className='purple'>Pulse</span></p>
-                <p>Products</p>
-                <p>Prices</p>
-                <p>Company</p>
             </div>
+            <div className='items'>
+                    <p>Products</p>
+                    <p>Prices</p>
+                    <p>Company</p>
+                </div>
             <button>
                 GET STARTED
             </button>
@@ -30,7 +32,7 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
     .navbar{
         height: 9vh;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         color: white;
         padding: 0px 30px;
@@ -48,6 +50,19 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
             p{
                 margin-right: 25px;
                 color: #fffef1;
+            }
+        }
+        .items{
+            display: flex;
+            margin: 0 10px;
+            width: 400px;
+            justify-content: space-between;
+            align-items: center;
+            
+            p{
+                &:hover{
+                    color: yellow;
+                }
             }
         }
         button {
@@ -83,6 +98,7 @@ font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
     }
 `;
+
 const StyledLink = styled(Link)`
   text-decoration: none;
 `;

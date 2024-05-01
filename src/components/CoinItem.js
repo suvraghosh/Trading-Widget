@@ -24,31 +24,34 @@ export default function CoinItem({coins}) {
 }
 
 const Container = styled.div`
-background-color: #232021;
-color: white;
-display: flex;
-justify-content: space-between;
-align-items: center;
-font-family: Tahoma, sans-serif;
-background-color: #1d2127;
-border-radius: 2px 2px 0px 0px;
-border-bottom: 1px solid #333;
-margin: 0.1rem 1rem;
-padding: .7rem 1rem;
-font-weight: 700;
-  &:hover{
+  background-color: #232021;
+  color: white;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  align-items: center;
+  font-family: Tahoma, sans-serif;
+  background-color: #1d2127;
+  border-radius: 2px 2px 0px 0px;
+  border-bottom: 1px solid #333;
+  margin: 0.1rem 1rem;
+  padding: .7rem 1rem;
+  font-weight: 700;
+  &:hover {
     transform: scale(1.01);
     transition: .3s ease-in-out;
     cursor: pointer;
   }
-  img{
+  img {
     height: 25px;
     margin-right: 8px;
     padding-right: 5px;
     width: auto;
   }
-  .img-symbol{
+  .img-symbol {
     display: flex;
     align-items: center;
+  }
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr); /* Adjust for responsiveness */
   }
 `;

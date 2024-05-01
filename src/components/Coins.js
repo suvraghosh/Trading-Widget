@@ -30,30 +30,34 @@ export default function Coins({coins}) {
 }
 
 const Container = styled.div`
-max-width: 1140px;
-margin: auto;
-color: #ffffff;
-    .heading{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-color: #1d2127;
-        box-shadow: 0px 0px 12px #333;
-        border-radius: 8px;
-        margin: 2rem 1rem;
-        padding: .7rem 1rem;
-        font-weight: 700;
-        font-size: 1rem;
-        .coin-name{
-            margin-left: -4rem;
-        }
+  max-width: 1140px;
+  margin: auto;
+  color: #ffffff;
+  .heading {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+    background-color: #1d2127;
+    box-shadow: 0px 0px 12px #333;
+    border-radius: 8px;
+    margin: 2rem 1rem;
+    padding: .7rem 1rem;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+  .coin-name {
+    margin-left: -4rem;
+  }
+  @media screen and (max-width: 720px) {
+    .heading {
+      grid-template-columns: 1fr;
     }
-    @media screen and (max-width: 720px){
-        .hide-mobile{
-            display: none;
-        }
+    .hide-mobile {
+      display: none;
     }
+  }
 `;
+
 const StyledLink = styled(Link)`
   text-decoration: none;
   /* Add other styles as needed */

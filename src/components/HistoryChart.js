@@ -47,30 +47,62 @@ export default function HistoryChart() {
             });
     }, []);
 
-const options = {
-  responsive: true,
-  maintainAspectRatio: false, // To allow the chart to exceed the container
-  plugins: {
-    legend: {
-      display: true,
-      position: 'top', // Adjust the position based on your preference
-    }
-  }
-};
-
+    const options = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+            legend: {
+                display: true,
+                position: 'bottom', // Move legend to bottom for better visibility
+                labels: {
+                    color: 'white', // Set legend label color
+                    font: {
+                        size: 12, // Adjust legend label font size
+                        weight: 'bold' // Make legend label bold
+                    }
+                }
+            }
+        },
+        scales: {
+            x: {
+                grid: {
+                    color: 'white', // Set color of horizontal grid lines
+                    borderWidth: 1 // Add border to horizontal grid lines
+                },
+                ticks: {
+                    color: 'white', // Set color of x-axis labels
+                    font: {
+                        size: 10 // Adjust x-axis label font size
+                    }
+                }
+            },
+            y: {
+                grid: {
+                    color: '#DDDDDD', // Set color of vertical grid lines
+                    borderWidth: 1 // Add border to vertical grid lines
+                },
+                ticks: {
+                    color: 'white', // Set color of y-axis labels
+                    font: {
+                        size: 10 // Adjust y-axis label font size
+                    }
+                }
+            }
+        }
+    };
     const data = {
-        labels: coinChartData.map(value=> moment(value.x).format('MMMDD')),
+        labels: coinChartData.map(value => moment(value.x).format('MMMDD')),
         datasets: [
             {
                 fill: true,
                 label: `${params.coinId}`,
-                data: coinChartData.map(val=>val.y),
-                borderColor: '#333333', // Border color
+                data: coinChartData.map(val => val.y),
+                borderColor: 'white', // Border color
                 backgroundColor: 'rgba(53, 162, 235, 0.2)'
             }
         ]
     }
-    return ( 
+    return (
         <Container>
             <Line options={options} data={data} />
         </Container>
@@ -78,14 +110,16 @@ const options = {
 }
 
 const Container = styled.div`
-background-color: #CCCCCC;
-width: 700px;
-height: 400px;
-    @media screen and (max-width: 1280px){
-        width: 500px;
-    }
-    @media screen and (max-width: 540px){
-        width: 370px;
-        height: 300px;
-    }
+  background-color: transparent; /* Change background color */
+  border-radius: 8px; /* Add border radius */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  width: 700px;
+  height: 400px;
+  @media screen and (max-width: 1280px){
+    width: 500px;
+  }
+  @media screen and (max-width: 540px){
+    width: 370px;
+    height: 300px;
+  }
 `;
