@@ -33,6 +33,7 @@ const Container = styled.div`
   max-width: 1140px;
   margin: auto;
   color: #ffffff;
+  
   .heading {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -44,9 +45,7 @@ const Container = styled.div`
     padding: .7rem 1rem;
     font-weight: 700;
     font-size: 1rem;
-  }
-  .coin-name {
-    margin-left: -4rem;
+    grid-gap: 15px;
   }
   @media screen and (max-width: 720px) {
     .heading {

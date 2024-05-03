@@ -3,7 +3,10 @@ import axios from "axios";
 import { Routes,Route} from "react-router-dom";
 import Coins from "./components/Coins";
 import Coin from "./routes/Coin";
-import Navbar from "./components/Navbar";
+import TradingViewWidget from "./components/TradingViewWidget";
+import Header from "./components/Header/Header";
+import HomePage from "./components/HomePage";
+import Footer from "./components/Footer/Footer"
 
 function App() {
   const [coins,setCoins] = useState([]);
@@ -24,13 +27,16 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Header />
       <Routes>
-        <Route path="/" element={<Coins coins={coins} />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/crypto" element={<Coins coins={coins} />} />
+        <Route path="/stocks" element={<TradingViewWidget />} />
         <Route path="coin" element={<Coin />}>
           <Route path=":coinId" element={<Coin />} />
         </Route>
       </Routes>
+      <Footer />
     </>
   );
 }
