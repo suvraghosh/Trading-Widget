@@ -28,10 +28,10 @@ const Header = () => {
             <div className="navlinks">
                 <button className="close-btn" onClick={closeToggle}>X</button>
                 <ul>
-                    <li><a href='/stocks'>Invest</a></li>
-                    <li><a href='/#'>Trade</a></li>
-                    <li><a href='/#'>News</a></li>
-                    <li><a href='/#'>Learn</a></li>
+                    <li><a href='/'>Home</a></li>
+                    <li><a href='/stocks'>Stocks</a></li>
+                    <li><a href='/crypto'>Crypto</a></li>
+                    <li><a href='/news'>News</a></li>
                     <li><a href='/#'>About Us</a></li>
                     <li><a href='/#'>Pricing</a></li>   
                 </ul>

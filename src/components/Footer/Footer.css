@@ -16,7 +16,6 @@
     justify-content: space-around;
 }
 .footer-col{
-    float: left;
     width: full;
     padding: 20px 0 20px 20px;
     height: auto;
@@ -37,9 +36,6 @@
     font-size: 14px;
     color: #121212;
     padding-bottom: 5px;
-}
-.footer col ul{
-    display: block;
 }
 .footer-col ul li{
     list-style: none;
@@ -97,11 +93,20 @@
     }
 }
 @media (max-width:600px){
-    .footer-links{
-        width: 90%;
+    .footer-col ul li{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-col h3{
+        text-align: center;
+    }
+    .footer-row{
+        display: flex;
+        flex-direction: column;
     }
     .footer-col{
-        width: 100%;
+        width: 90%;
     }
     .copyrights{
         width: 95%;

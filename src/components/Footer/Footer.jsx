@@ -35,14 +35,12 @@ const Footer = () => {
                 <div className="footer-col">
                     <h3>Products</h3>
                     <ul>
-                        <li><a href="/#">Pro Web</a></li>
-                        <li><a href="/#">Pro Mobile</a></li>
+                        <li><a href="/stocks">Stocks</a></li>
+                        <li><a href="/crypto">Crypto</a></li>
                         <li><a href="/#">Mutual Funds</a></li>
                         <li><a href="/#">IPOs</a></li>
                         <li><a href="/#">Future and options</a></li>
-                        <li><a href="/#">Stocks</a></li>
                         <li><a href="/#">Indices</a></li>
-                        <li><a href="/#">Uplink Developer API</a></li>
                     </ul>
                 </div>
                 {/* Companys useful links */}
@@ -54,23 +52,7 @@ const Footer = () => {
                       <li><a href="/#">Brokerage Charges</a></li>
                       <li><a href="/#">Refer and Earn</a></li>
                       <li><a href="/#">Announcements</a></li>
-                      <li><a href="/#">Partner with us</a></li>
-                      <li><a href="/#">Press release</a></li>
                       <li><a href="/#">Contact Us</a></li>
-                    </ul>
-                </div>
-                {/* Company services detail links */}
-                <div className="footer-col">
-                    <h3>Services</h3>
-                    <ul>
-                      <li><a href="/#">Demat Acoount</a></li>
-                      <li><a href="/#">Trading Account</a></li>
-                      <li><a href="/#">Mutual Fund Account</a></li>
-                      <li><a href="/#">Company Trading</a></li>
-                      <li><a href="/#">Equity Trading</a></li>
-                      <li><a href="/#">Download Forms</a></li>
-                      <li><a href="/#">Margin Sheets</a></li>
-                      <li><a href="/#">Help center</a></li>
                     </ul>
                 </div>
                 {/* Social media links */}

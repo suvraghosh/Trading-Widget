@@ -7,6 +7,7 @@ import TradingViewWidget from "./components/TradingViewWidget";
 import Header from "./components/Header/Header";
 import HomePage from "./components/HomePage";
 import Footer from "./components/Footer/Footer"
+import TradingNews from "./components/TradingNews";
 
 function App() {
   const [coins,setCoins] = useState([]);
@@ -30,6 +31,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="/news" element={<TradingNews />} />
         <Route path="/crypto" element={<Coins coins={coins} />} />
         <Route path="/stocks" element={<TradingViewWidget />} />
         <Route path="coin" element={<Coin />}>
