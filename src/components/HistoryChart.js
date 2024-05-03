@@ -45,7 +45,7 @@ export default function HistoryChart() {
             .catch((err) => {
                 console.log('Error:', err);
             });
-    }, []);
+    });
 
     const options = {
         responsive: true,
