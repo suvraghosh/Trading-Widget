@@ -7,11 +7,11 @@ import Hero from './Container/Hero'
 const HomePage = () => {
   return (
     <div>
-        <ScrollToTopButton />
-        <Hero />
-        <InvestSection />
-        <List />
-  </div>
+      <ScrollToTopButton />
+      <Hero />
+      <InvestSection />
+      <List />
+    </div>
   )
 }
 

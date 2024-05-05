@@ -7,7 +7,7 @@ import Coin from '../routes/Coin';
 
 export default function Coins({coins}) {
   return (
-    <Container>
+          <Container>
         <div>
             <div className='heading'>
                 <p className=''>#</p>

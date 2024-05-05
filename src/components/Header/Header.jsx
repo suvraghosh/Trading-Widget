@@ -20,7 +20,7 @@ const Header = () => {
     <div className='head'>    {/* Header div start */}
         {/* Header logo */}
         <div className="logo">
-            <a href='/#'><h1>Trade<span>Hub</span></h1></a>
+            <a href='/#'><h1>Trading<span>Widget</span></h1></a>
         </div>
         <button className="open-btn" onClick={openToggle}> <FaBars /></button>
         {/* Navlinks */}

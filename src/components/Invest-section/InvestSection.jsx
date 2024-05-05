@@ -50,7 +50,7 @@ const InvestSection = () => {
             </div>
             <div className="type-section-col">
               <div className="types-head">
-                <h1>Rise Stox for Investors</h1>
+                <h1>Trading Widget for Investors</h1>
               </div>
               <div className="types-para">
                   <p>Invest Rights, Invest Now in Stocks,Mutual Funds and IPOs</p>
@@ -79,7 +79,7 @@ const InvestSection = () => {
           <div className="trader-type-div">
             <div className="type-section-col">
               <div className="types-head">
-                <h1>Rise Stox pro for Traders</h1>
+                <h1>Trading Widget for Traders</h1>
               </div>
               <div className="types-para">
                   <p>Powerful trading in Equities,Future,Options,Commodities and Currencies made simple</p>

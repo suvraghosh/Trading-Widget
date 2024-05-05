@@ -8,6 +8,8 @@ import Header from "./components/Header/Header";
 import HomePage from "./components/HomePage";
 import Footer from "./components/Footer/Footer"
 import TradingNews from "./components/TradingNews";
+import { HashLoader } from 'react-spinners';
+import './index.css';
 
 function App() {
   const [coins,setCoins] = useState([]);
@@ -26,19 +28,41 @@ function App() {
     })
   },[])
 
+  
+  const [loading, setLoading] = useState(true);
+
+  // Simulate loading delay (replace this with actual loading logic)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false); // Set loading state to false after delay
+    }, 2000); // Adjust the delay time as needed
+
+    return () => clearTimeout(timer); // Cleanup function
+  }, []);
+
   return (
     <>
-      <Header />
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/news" element={<TradingNews />} />
-        <Route path="/crypto" element={<Coins coins={coins} />} />
-        <Route path="/stocks" element={<TradingViewWidget />} />
-        <Route path="coin" element={<Coin />}>
-          <Route path=":coinId" element={<Coin />} />
-        </Route>
-      </Routes>
-      <Footer />
+        {
+          loading ? (
+            <div className="loader-container">
+              <HashLoader color="#36d7b7" loading={loading} size={40} />
+            </div>
+          ) : (
+            <>    
+              <Header />
+              <Routes>
+                <Route path="/" element={<HomePage />} />
+                <Route path="/news" element={<TradingNews />} />
+                <Route path="/crypto" element={<Coins coins={coins} />} />
+                <Route path="/stocks" element={<TradingViewWidget />} />
+                <Route path="coin" element={<Coin />}>
+                  <Route path=":coinId" element={<Coin />} />
+                </Route>
+              </Routes>
+              <Footer />
+            </>
+          )
+        }
     </>
   );
 }

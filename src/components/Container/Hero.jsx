@@ -12,7 +12,7 @@ const Hero = () => {
                 <div className="primary-bg">
                     {/* Content header */}
                     <div className="content-heading">
-                        <h1>Invest Right,Invest Now With Rise Stox</h1>
+                        <h1>Invest Right,Invest Now With Trading Widget</h1>
                     </div>
                     {/* Content describe para */}
                     <div className="content-des">
@@ -22,7 +22,7 @@ const Hero = () => {
                     <div className="content-fl-div">
                         <div className="fl-div-left">
                             <span>+91</span>
-                            <input type='text' placeholder='Enter Mobile Number' className='input-field'></input>
+                            <input type='text' placeholder='Enter Mobile Number' className='input-field' disabled ></input>
                         </div>
                         <div className="fl-div-right">
                             <button className='btn-sign-up sign-up-sec'>Sign Up</button>

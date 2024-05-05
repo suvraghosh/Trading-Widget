@@ -1,11 +1,11 @@
 /* Header div */
 .head{
     width: auto;
-    height: auto;
+    height: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between ;
-    background-color: #dadff7;
+    background-color: #333;
     padding: 10px 20px;
     /* position: fixed; */
     top: 0;
@@ -13,6 +13,7 @@
     margin-bottom: 30px;
 }
 .logo a{
+    font-size: 13px;
     text-decoration: none;
 }
 .logo a h1 {

@@ -1,11 +1,28 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
 import {BiTrendingDown,BiTrendingUp} from "react-icons/bi";
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+import 'react-loading-skeleton/dist/skeleton.css'
 
 export default function CoinItem({coins}) {
+  const [loading, setLoading] = useState(true); 
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 2000); 
+
+    return () => clearTimeout(timer); 
+  }, []);
 
   return (
-    <Container>
+    <>
+      {loading ? (
+        <SkeletonTheme baseColor="#202020" highlightColor="#444" height={50}>
+          <Skeleton count={3} />
+        </SkeletonTheme>
+    ) : (
+      <Container>
         <p className=''>{coins.market_cap_rank}</p>
         <div className='img-symbol'>
             <img src={coins.image} alt='' />
@@ -20,6 +37,8 @@ export default function CoinItem({coins}) {
         </p>
         <p className='hide-mobile'>${coins.total_volume.toLocaleString()}</p>
     </Container>
+    )}
+    </>
   )
 }
 
