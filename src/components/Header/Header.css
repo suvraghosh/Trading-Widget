@@ -32,11 +32,12 @@
 }
 .navlinks ul {
     display: flex;
+    margin: 0 30px;
 }
 .navlinks ul li{
     list-style: none;
     justify-content: space-between;
-    padding: 0 30px 0 0;
+    padding: 0 30px;
 }
 .navlinks ul li a{
     color:#d91443 ;

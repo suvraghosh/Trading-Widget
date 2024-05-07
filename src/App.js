@@ -31,13 +31,12 @@ function App() {
   
   const [loading, setLoading] = useState(true);
 
-  // Simulate loading delay (replace this with actual loading logic)
   useEffect(() => {
     const timer = setTimeout(() => {
-      setLoading(false); // Set loading state to false after delay
-    }, 2000); // Adjust the delay time as needed
+      setLoading(false); 
+    }, 2000); 
 
-    return () => clearTimeout(timer); // Cleanup function
+    return () => clearTimeout(timer);
   }, []);
 
   return (

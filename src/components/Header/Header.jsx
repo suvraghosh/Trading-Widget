@@ -32,8 +32,6 @@ const Header = () => {
                     <li><a href='/stocks'>Stocks</a></li>
                     <li><a href='/crypto'>Crypto</a></li>
                     <li><a href='/news'>News</a></li>
-                    <li><a href='/#'>About Us</a></li>
-                    <li><a href='/#'>Pricing</a></li>   
                 </ul>
             </div>
             {/* Header search and button */}

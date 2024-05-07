@@ -19,7 +19,7 @@ export default function CoinItem({coins}) {
     <>
       {loading ? (
         <SkeletonTheme baseColor="#202020" highlightColor="#444" height={50}>
-          <Skeleton count={3} />
+          <Skeleton />
         </SkeletonTheme>
     ) : (
       <Container>
