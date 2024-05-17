@@ -42,20 +42,23 @@ export default function Coin() {
     return (
       <Container>
                 <div className='coin-container'>
-                    <div className='content'>
+                    {/* <div className='content'> */}
                         <div className='rank'>
                             <span className='rank-btn'>Rank #{coin.market_cap_rank}</span>
                         </div>
-                        <div className='info'>
-                            <div className='coin-heading'>
-                                {coin.image ? <img src={coin.image.small} alt='coin-img' /> : null}
-                                <p>{coin.name}</p>
-                                <p>{coin.symbol}/USD</p>
-                            </div>
-                            <div className='coin-price'>
-                                {coin.market_data ? <h2>${coin.market_data.current_price.usd}</h2> : null}
-                            </div>
-                        </div>
+                    {/* </div> */}
+
+                    <div className='content'>
+                      <div className='info'>
+                              <div className='coin-heading'>
+                                  {coin.image ? <img src={coin.image.small} alt='coin-img' /> : null}
+                                  <p>{coin.name}</p>
+                                  <p>{coin.symbol}/USD</p>
+                              </div>
+                              <div className='coin-price'>
+                                  {coin.market_data ? <h2>${coin.market_data.current_price.usd}</h2> : null}
+                              </div>
+                          </div>
                     </div>
 
                     <div className='content'>
@@ -146,29 +149,28 @@ const Container = styled.div`
     background-color: #26272b;
     box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
     
-    .content {
-      max-width: 500px;
-      margin: 0.6rem auto;
-      padding: 1rem;
-      
-      .rank {
-        margin-bottom: 1rem;
+    .rank {
         .rank-btn {
           border: 1px solid #ff930a;
           background: radial-gradient(190.82% 190.82% at 50% 100%, rgba(254, 173, 15, 1) 0%, rgba(168, 112, 64, 0.62) 18.09%);
           border-radius: 8px;
           padding: 0.5rem;
           position: relative;
-          bottom: 40px;
-          right: 20px;
+          bottom: 20px;
+          right: 5px;
           box-shadow: 0px 0px 8px #ff930a;
         }
       }
       
+    .content {
+      max-width: 450px;
+      margin: 0.6rem auto;
+      padding: 1rem;
+      
       .info {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 10px;
         
         .coin-heading {
           align-items: center;
@@ -207,7 +209,7 @@ const Container = styled.div`
       .stats {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
+        gap: 40px;
         
         .row {
           border-bottom: 1px solid #808000;
@@ -219,16 +221,13 @@ const Container = styled.div`
           }
         }
       }
-      .about{
-        padding: 10px;
-      }
       
       .about h3 {
         margin: 1rem 0;
       }
       .about{
         button{
-            background-color: gray;
+            background-color: #B3C8CF;
             height: 30px;
             width: 100px;
             padding: 4px;
@@ -236,6 +235,9 @@ const Container = styled.div`
             border: none;
             margin-top: 5px;
             cursor: pointer;
+            &:hover{
+              background-color: #7AB2B2;
+            }
         }
       }
     }
